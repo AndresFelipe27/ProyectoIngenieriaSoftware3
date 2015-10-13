@@ -1,6 +1,6 @@
 bufete_aplicacion:
     resource: "@BufeteAplicacionBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /gestion/
 
 bufete_main:
     resource: "@BufeteMainBundle/Resources/config/routing.yml"

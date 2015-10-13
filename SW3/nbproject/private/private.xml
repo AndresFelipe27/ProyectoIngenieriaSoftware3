@@ -3,7 +3,25 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/AplicacionBundle/Resources/views/ProcesoJudicial/new.html.twig</file>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/MainBundle/Controller/DefaultController.php</file>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/MainBundle/Resources/views/Default/micaso.html.twig</file>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/AplicacionBundle/Resources/views/Abogado/show.html.twig</file>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/AplicacionBundle/Resources/views/ProcesoJudicial/show.html.twig</file>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/AplicacionBundle/Form/AbogadoType.php</file>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/MainBundle/Resources/views/Default/index.html.twig</file>
+            <file>file:/C:/xampp/htdocs/SW3/app/Resources/views/base.html.twig</file>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/AplicacionBundle/Resources/views/ProcesoJudicial/edit.html.twig</file>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/AplicacionBundle/Resources/config/routing/procesojudicial.yml</file>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/MainBundle/Resources/views/Default/quien.html.twig</file>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/AplicacionBundle/Resources/views/Abogado/index.html.twig</file>
             <file>file:/C:/xampp/htdocs/SW3/src/Bufete/AplicacionBundle/Entity/Abogado.php</file>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/AplicacionBundle/Resources/views/Abogado/new.html.twig</file>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/AplicacionBundle/Entity/Cliente.php</file>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/AplicacionBundle/Controller/ProcesoJudicialController.php</file>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/AplicacionBundle/Resources/views/Abogado/edit.html.twig</file>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/MainBundle/Resources/config/routing.yml</file>
+            <file>file:/C:/xampp/htdocs/SW3/src/Bufete/AplicacionBundle/Entity/ProcesoJudicial.php</file>
         </group>
     </open-files>
 </project-private>

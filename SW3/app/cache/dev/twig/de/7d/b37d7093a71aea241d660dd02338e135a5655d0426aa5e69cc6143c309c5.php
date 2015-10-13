@@ -32,15 +32,24 @@ class __TwigTemplate_de7db37d7093a71aea241d660dd02338e135a5655d0426aa5e69cc6143c
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 3
+    // line 4
     public function block_body($context, array $blocks = array())
     {
-        // line 4
-        echo "<h1>Abogado list</h1>
+        // line 5
+        echo "<style>
+    
+    .datagrid table { border-collapse: collapse; text-align: left; width: 100%; } .datagrid {font: normal 12px/150% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden; border: 1px solid #8C8C8C; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }.datagrid table td, .datagrid table th { padding: 3px 10px; }.datagrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8A8A8A), color-stop(1, #3B3B3B) );background:-moz-linear-gradient( center top, #8A8A8A 5%, #3B3B3B 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8A8A8A', endColorstr='#3B3B3B');background-color:#8A8A8A; color:#FFFFFF; font-size: 14px; font-weight: bold; border-left: 1px solid #A3A3A3; } .datagrid table thead th:first-child { border: none; }.datagrid table tbody td { color: #000000; border-left: 1px solid #A8B3B5;font-size: 12px;font-weight: bold; }.datagrid table tbody .alt td { background: #EBEBEB; color: #000000; }.datagrid table tbody td:first-child { border-left: none; }.datagrid table tbody tr:last-child td { border-bottom: none; }.datagrid table tfoot td div { border-top: 1px solid #8C8C8C;background: #EBEBEB;} .datagrid table tfoot td { padding: 0; font-size: 12px } .datagrid table tfoot td div{ padding: 2px; }.datagrid table tfoot td ul { margin: 0; padding:0; list-style: none; text-align: right; }.datagrid table tfoot  li { display: inline; }.datagrid table tfoot li a { text-decoration: none; display: inline-block;  padding: 2px 8px; margin: 1px;color: #F5F5F5;border: 1px solid #8C8C8C;-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8C8C8C), color-stop(1, #7D7D7D) );background:-moz-linear-gradient( center top, #8C8C8C 5%, #7D7D7D 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C8C8C', endColorstr='#7D7D7D');background-color:#8C8C8C; }.datagrid table tfoot ul.active, .datagrid table tfoot ul a:hover { text-decoration: none;border-color: #7D7D7D; color: #F5F5F5; background: none; background-color:#8C8C8C;}div.dhtmlx_window_active, div.dhx_modal_cover_dv { position: fixed !important;} 
+    .acciones {display: inline-block; margin-right: 10px;} 
+    
+</style>   
+    
+    <h1>Lista de Abogados</h1>
 
-    <table class=\"records_list\">
-        <thead>
-            <tr>
+    
+    <div class=\"datagrid\">
+        <table>
+            <thead>
+                <tr>
                 <th>Id</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
@@ -48,55 +57,55 @@ class __TwigTemplate_de7db37d7093a71aea241d660dd02338e135a5655d0426aa5e69cc6143c
                 <th>Celular</th>
                 <th>Contrasena</th>
                 <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
+                </tr>
+            </thead>
+    <tbody>
         ";
-        // line 19
+        // line 29
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-            // line 20
+            // line 30
             echo "            <tr>
                 <td><a href=\"";
-            // line 21
+            // line 31
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("abogado_show", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "id", array()), "html", null, true);
             echo "</a></td>
                 <td>";
-            // line 22
+            // line 32
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "nombre", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 23
+            // line 33
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "apellido", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 24
+            // line 34
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "correo", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 25
+            // line 35
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "celular", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 26
+            // line 36
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "contrasena", array()), "html", null, true);
             echo "</td>
                 <td>
                 <ul>
-                    <li>
+                    <li class=\"acciones\">
                         <a href=\"";
-            // line 30
+            // line 40
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("abogado_show", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">show</a>
+            echo "\">Mostrar</a>
                     </li>
-                    <li>
+                    <li class=\"acciones\">
                         <a href=\"";
-            // line 33
+            // line 43
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("abogado_edit", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">edit</a>
+            echo "\">Editar</a>
                     </li>
                 </ul>
                 </td>
@@ -106,17 +115,19 @@ class __TwigTemplate_de7db37d7093a71aea241d660dd02338e135a5655d0426aa5e69cc6143c
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 39
-        echo "        </tbody>
-    </table>
+        // line 49
+        echo "    
+    </tbody>
+</table></div>
+    
 
         <ul>
         <li>
             <a href=\"";
-        // line 44
+        // line 56
         echo $this->env->getExtension('routing')->getPath("abogado_new");
         echo "\">
-                Create a new entry
+                Agregar Nuevo Abogado
             </a>
         </li>
     </ul>
@@ -135,6 +146,6 @@ class __TwigTemplate_de7db37d7093a71aea241d660dd02338e135a5655d0426aa5e69cc6143c
 
     public function getDebugInfo()
     {
-        return array (  117 => 44,  110 => 39,  98 => 33,  92 => 30,  85 => 26,  81 => 25,  77 => 24,  73 => 23,  69 => 22,  63 => 21,  60 => 20,  56 => 19,  39 => 4,  36 => 3,  11 => 1,);
+        return array (  128 => 56,  119 => 49,  107 => 43,  101 => 40,  94 => 36,  90 => 35,  86 => 34,  82 => 33,  78 => 32,  72 => 31,  69 => 30,  65 => 29,  39 => 5,  36 => 4,  11 => 1,);
     }
 }

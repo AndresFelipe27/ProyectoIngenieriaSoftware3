@@ -1,3 +1,9 @@
 bufete_main_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: BufeteMainBundle:Default:index }
+    path:     /{pagina}
+    defaults: { _controller: BufeteMainBundle:Default:index , pagina:home }
+
+
+vercaso:
+    path:     /vercaso/
+    defaults: { _controller: BufeteMainBundle:Default:vercaso , codigo:0 }
+    requirements: { _method: post }

@@ -89,13 +89,30 @@ class __TwigTemplate_d912a7bb3d9d2670742182fee0fdf3b3dcc16ae35977016ffe7da94a88c
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "prioridad", array()), "html", null, true);
         echo "</td>
             </tr>
+            
+            <tr>
+                <th>Abogado a cargo</th>
+                <td>";
+        // line 39
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "abogado", array()), "html", null, true);
+        echo "</td>
+            </tr>
+            
+            <tr>
+                <th>Cliente </th>
+                <td>";
+        // line 44
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "cliente", array()), "html", null, true);
+        echo "</td>
+            </tr>
+            
         </tbody>
     </table>
 
         <ul class=\"record_actions\">
     <li>
         <a href=\"";
-        // line 41
+        // line 52
         echo $this->env->getExtension('routing')->getPath("procesojudicial");
         echo "\">
             Back to the list
@@ -103,17 +120,20 @@ class __TwigTemplate_d912a7bb3d9d2670742182fee0fdf3b3dcc16ae35977016ffe7da94a88c
     </li>
     <li>
         <a href=\"";
-        // line 46
+        // line 57
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("procesojudicial_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id", array()))), "html", null, true);
         echo "\">
             Edit
         </a>
     </li>
     <li>";
-        // line 50
+        // line 61
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "</li>
 </ul>
+    
+    
+ 
 ";
     }
 
@@ -129,6 +149,6 @@ class __TwigTemplate_d912a7bb3d9d2670742182fee0fdf3b3dcc16ae35977016ffe7da94a88c
 
     public function getDebugInfo()
     {
-        return array (  114 => 50,  107 => 46,  99 => 41,  89 => 34,  82 => 30,  75 => 26,  68 => 22,  61 => 18,  54 => 14,  47 => 10,  39 => 4,  36 => 3,  11 => 1,);
+        return array (  131 => 61,  124 => 57,  116 => 52,  105 => 44,  97 => 39,  89 => 34,  82 => 30,  75 => 26,  68 => 22,  61 => 18,  54 => 14,  47 => 10,  39 => 4,  36 => 3,  11 => 1,);
     }
 }

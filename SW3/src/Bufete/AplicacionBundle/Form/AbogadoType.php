@@ -19,7 +19,7 @@ class AbogadoType extends AbstractType
             ->add('apellido')
             ->add('correo')
             ->add('celular')
-            ->add('contrasena')
+            ->add('contrasena' ,'password')
         ;
     }
     

@@ -33,6 +33,17 @@
                 <th>Prioridad</th>
                 <td>{{ entity.prioridad }}</td>
             </tr>
+            
+            <tr>
+                <th>Abogado a cargo</th>
+                <td>{{ entity.abogado }}</td>
+            </tr>
+            
+            <tr>
+                <th>Cliente </th>
+                <td>{{ entity.cliente }}</td>
+            </tr>
+            
         </tbody>
     </table>
 
@@ -49,4 +60,7 @@
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
+    
+    
+ 
 {% endblock %}

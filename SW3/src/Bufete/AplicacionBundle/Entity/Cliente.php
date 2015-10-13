@@ -63,8 +63,11 @@ class Cliente
     
     
     
-    
-    
+    //esto sirve para al agregar un objeto aparecesca un combo con los abogados q hay     
+     public function __toString()
+ {
+     return $this->nombre;
+ }
     
     
     

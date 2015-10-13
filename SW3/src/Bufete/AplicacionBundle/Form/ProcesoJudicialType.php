@@ -15,6 +15,7 @@ class ProcesoJudicialType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('titulo')
             ->add('descripcion')
             ->add('estado')
             ->add('codigoConsulta')
@@ -23,6 +24,7 @@ class ProcesoJudicialType extends AbstractType
             ->add('prioridad')
             ->add('abogado')
             ->add('cliente')
+                
         ;
     }
     
