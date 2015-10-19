@@ -1,12 +1,73 @@
-{% extends '::base.html.twig' %}
+{% extends 'BufeteAplicacionBundle::Default/admin.html.twig' %}
 
-{% block body -%}
-    <h1>Cliente list</h1>
+{% block style%}
+    <style>
+        
+        #contenedor{
+            width: 100%;
+        }
+        
+        .item{
+            
+            background-color: #e9eaed;
+            
+        }
+        
+        .cliente {
+            
+                width: 50px;
+        }
+        
+        h3{
+            
+           
+        }
 
+        
+    </style>
+{%endblock%}
+
+{% block page%}
+    <div id="micaso" class="fullsize"  style="  background-color: #F0F0D8;height: 540px;">
+        
+        <div id="contenedor">
+        {% for entity in entities %}
+            
+            
+           <a href="{{path('cliente_show', { 'id': entity.id }) }}"> <div class="item">
+           
+              <img style="width: 50px;" src="{{asset('public/images/user.png')}}" />
+            
+                
+              <h3 style="display: inline-block; margin-left: 25px; margin-right: 40px;">
+                {{ entity.nombre }}{{ entity.apellido }} </h3>
+                {{ entity.correo }}
+
+
+
+
+                        
+
+
+                        <a href="{{ path('cliente_edit', { 'id': entity.id }) }}"><img style="width: 18px;" src="{{asset('public/images/editar.png')}}" /></a>
+                        
+                
+               </div>
+             </a>
+            
+        {% endfor %}
+        </div>
+        
+        
+        
+        
+        <h1>Cliente list</h1>
+
+    
     <table class="records_list">
         <thead>
             <tr>
-                <th>Id</th>
+                <th class="a">Id</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Correo</th>
@@ -46,4 +107,6 @@
             </a>
         </li>
     </ul>
+    </div>
+                
     {% endblock %}

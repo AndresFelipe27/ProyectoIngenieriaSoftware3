@@ -2,7 +2,6 @@ bufete_main_homepage:
     path:     /{pagina}
     defaults: { _controller: BufeteMainBundle:Default:index , pagina:home }
 
-
 vercaso:
     path:     /vercaso/
     defaults: { _controller: BufeteMainBundle:Default:vercaso , codigo:0 }

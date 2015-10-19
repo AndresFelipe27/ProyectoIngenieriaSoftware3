@@ -121,6 +121,66 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         if (0 === strpos($pathinfo, '/gestion')) {
+            if (0 === strpos($pathinfo, '/gestion/noticia')) {
+                // noticia
+                if (rtrim($pathinfo, '/') === '/gestion/noticia') {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'noticia');
+                    }
+
+                    return array (  '_controller' => 'Bufete\\AplicacionBundle\\Controller\\NoticiaController::indexAction',  '_route' => 'noticia',);
+                }
+
+                // noticia_show
+                if (preg_match('#^/gestion/noticia/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticia_show')), array (  '_controller' => 'Bufete\\AplicacionBundle\\Controller\\NoticiaController::showAction',));
+                }
+
+                // noticia_new
+                if ($pathinfo === '/gestion/noticia/new') {
+                    return array (  '_controller' => 'Bufete\\AplicacionBundle\\Controller\\NoticiaController::newAction',  '_route' => 'noticia_new',);
+                }
+
+                // noticia_create
+                if ($pathinfo === '/gestion/noticia/create') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_noticia_create;
+                    }
+
+                    return array (  '_controller' => 'Bufete\\AplicacionBundle\\Controller\\NoticiaController::createAction',  '_route' => 'noticia_create',);
+                }
+                not_noticia_create:
+
+                // noticia_edit
+                if (preg_match('#^/gestion/noticia/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticia_edit')), array (  '_controller' => 'Bufete\\AplicacionBundle\\Controller\\NoticiaController::editAction',));
+                }
+
+                // noticia_update
+                if (preg_match('#^/gestion/noticia/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                        $allow = array_merge($allow, array('POST', 'PUT'));
+                        goto not_noticia_update;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticia_update')), array (  '_controller' => 'Bufete\\AplicacionBundle\\Controller\\NoticiaController::updateAction',));
+                }
+                not_noticia_update:
+
+                // noticia_delete
+                if (preg_match('#^/gestion/noticia/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                        $allow = array_merge($allow, array('POST', 'DELETE'));
+                        goto not_noticia_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticia_delete')), array (  '_controller' => 'Bufete\\AplicacionBundle\\Controller\\NoticiaController::deleteAction',));
+                }
+                not_noticia_delete:
+
+            }
+
             if (0 === strpos($pathinfo, '/gestion/procesojudicial')) {
                 // procesojudicial
                 if (rtrim($pathinfo, '/') === '/gestion/procesojudicial') {
@@ -361,11 +421,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             }
 
-            // bufete_aplicacion_homepage
-            if (0 === strpos($pathinfo, '/gestion/hello') && preg_match('#^/gestion/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'bufete_aplicacion_homepage')), array (  '_controller' => 'Bufete\\AplicacionBundle\\Controller\\DefaultController::indexAction',));
-            }
+        }
 
+        // admin
+        if ($pathinfo === '/admin') {
+            return array (  '_controller' => 'Bufete\\AplicacionBundle\\Controller\\AdminController::indexAction',  '_route' => 'admin',);
         }
 
         // bufete_main_homepage

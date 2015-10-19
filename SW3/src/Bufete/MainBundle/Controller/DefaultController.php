@@ -24,7 +24,6 @@ class DefaultController extends Controller
             return $this->render('BufeteMainBundle:Default:micaso.html.twig', array());
         }
         
-        
         return $this->createNotFoundException("pagina no encontrada");
     }
     

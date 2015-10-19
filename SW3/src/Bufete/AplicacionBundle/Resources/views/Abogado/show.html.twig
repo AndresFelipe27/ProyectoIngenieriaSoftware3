@@ -1,6 +1,7 @@
-{% extends '::base.html.twig' %}
+{% extends 'BufeteAplicacionBundle::Default/admin.html.twig' %}
 
-{% block body -%}
+{% block page%}
+    <div id="micaso" class="fullsize"  style="  background-color: #F0F0D8;height: 540px;">
     <h1>Abogado</h1>
 
     <table class="record_properties">
@@ -47,5 +48,5 @@
 </ul>
     
     {{entity.abogado}}
-    
+    </div>
 {% endblock %}

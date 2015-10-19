@@ -49,14 +49,25 @@ class Abogado
 
     
     /**
+     * @ORM\OneToMany(targetEntity="Noticia", mappedBy="abogado")
+     */
+    protected $noticias;
+
+    
+    
+        /**
      * @ORM\OneToMany(targetEntity="ProcesoJudicial", mappedBy="abogado")
      */
     protected $procesos;
- 
     public function __construct()
     {
         $this->procesos = new ArrayCollection();
+        $this->noticias = new ArrayCollection();
     }
+    
+    
+    
+    
     
     //esto sirve para al agregar un objeto aparecesca un combo con los abogados q hay     
      public function __toString()

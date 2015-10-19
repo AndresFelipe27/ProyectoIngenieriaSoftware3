@@ -9,7 +9,7 @@ class __TwigTemplate_d912a7bb3d9d2670742182fee0fdf3b3dcc16ae35977016ffe7da94a88c
 
         // line 1
         try {
-            $this->parent = $this->env->loadTemplate("::base.html.twig");
+            $this->parent = $this->env->loadTemplate("BufeteAplicacionBundle::Default/admin.html.twig");
         } catch (Twig_Error_Loader $e) {
             $e->setTemplateFile($this->getTemplateName());
             $e->setTemplateLine(1);
@@ -18,13 +18,13 @@ class __TwigTemplate_d912a7bb3d9d2670742182fee0fdf3b3dcc16ae35977016ffe7da94a88c
         }
 
         $this->blocks = array(
-            'body' => array($this, 'block_body'),
+            'page' => array($this, 'block_page'),
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "::base.html.twig";
+        return "BufeteAplicacionBundle::Default/admin.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -33,59 +33,60 @@ class __TwigTemplate_d912a7bb3d9d2670742182fee0fdf3b3dcc16ae35977016ffe7da94a88c
     }
 
     // line 3
-    public function block_body($context, array $blocks = array())
+    public function block_page($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>ProcesoJudicial</h1>
+        echo "    <div id=\"micaso\" class=\"fullsize\"  style=\"  background-color: #F0F0D8;height: 540px;\">
+    <h1>ProcesoJudicial</h1>
 
     <table class=\"record_properties\">
         <tbody>
             <tr>
                 <th>Id</th>
                 <td>";
-        // line 10
+        // line 11
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id", array()), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Descripcion</th>
                 <td>";
-        // line 14
+        // line 15
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "descripcion", array()), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Estado</th>
                 <td>";
-        // line 18
+        // line 19
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "estado", array()), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Codigoconsulta</th>
                 <td>";
-        // line 22
+        // line 23
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "codigoConsulta", array()), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Fechain</th>
                 <td>";
-        // line 26
+        // line 27
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "fechaIn", array()), "Y-m-d H:i:s"), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Fechavencimiento</th>
                 <td>";
-        // line 30
+        // line 31
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "fechaVencimiento", array()), "Y-m-d H:i:s"), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Prioridad</th>
                 <td>";
-        // line 34
+        // line 35
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "prioridad", array()), "html", null, true);
         echo "</td>
             </tr>
@@ -93,7 +94,7 @@ class __TwigTemplate_d912a7bb3d9d2670742182fee0fdf3b3dcc16ae35977016ffe7da94a88c
             <tr>
                 <th>Abogado a cargo</th>
                 <td>";
-        // line 39
+        // line 40
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "abogado", array()), "html", null, true);
         echo "</td>
             </tr>
@@ -101,7 +102,7 @@ class __TwigTemplate_d912a7bb3d9d2670742182fee0fdf3b3dcc16ae35977016ffe7da94a88c
             <tr>
                 <th>Cliente </th>
                 <td>";
-        // line 44
+        // line 45
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "cliente", array()), "html", null, true);
         echo "</td>
             </tr>
@@ -112,7 +113,7 @@ class __TwigTemplate_d912a7bb3d9d2670742182fee0fdf3b3dcc16ae35977016ffe7da94a88c
         <ul class=\"record_actions\">
     <li>
         <a href=\"";
-        // line 52
+        // line 53
         echo $this->env->getExtension('routing')->getPath("procesojudicial");
         echo "\">
             Back to the list
@@ -120,20 +121,20 @@ class __TwigTemplate_d912a7bb3d9d2670742182fee0fdf3b3dcc16ae35977016ffe7da94a88c
     </li>
     <li>
         <a href=\"";
-        // line 57
+        // line 58
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("procesojudicial_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id", array()))), "html", null, true);
         echo "\">
             Edit
         </a>
     </li>
     <li>";
-        // line 61
+        // line 62
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "</li>
 </ul>
     
     
- 
+    </div>
 ";
     }
 
@@ -149,6 +150,6 @@ class __TwigTemplate_d912a7bb3d9d2670742182fee0fdf3b3dcc16ae35977016ffe7da94a88c
 
     public function getDebugInfo()
     {
-        return array (  131 => 61,  124 => 57,  116 => 52,  105 => 44,  97 => 39,  89 => 34,  82 => 30,  75 => 26,  68 => 22,  61 => 18,  54 => 14,  47 => 10,  39 => 4,  36 => 3,  11 => 1,);
+        return array (  132 => 62,  125 => 58,  117 => 53,  106 => 45,  98 => 40,  90 => 35,  83 => 31,  76 => 27,  69 => 23,  62 => 19,  55 => 15,  48 => 11,  39 => 4,  36 => 3,  11 => 1,);
     }
 }

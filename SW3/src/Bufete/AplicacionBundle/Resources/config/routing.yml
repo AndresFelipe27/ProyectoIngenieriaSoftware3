@@ -1,3 +1,7 @@
+bufete_aplicacion_noticia:
+    resource: "@BufeteAplicacionBundle/Resources/config/routing/noticia.yml"
+    prefix:   /noticia
+
 bufete_aplicacion_procesojudicial:
     resource: "@BufeteAplicacionBundle/Resources/config/routing/procesojudicial.yml"
     prefix:   /procesojudicial
@@ -15,6 +19,10 @@ bufete_aplicacion_abogado:
     prefix:   /abogado
 
 
-bufete_aplicacion_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: BufeteAplicacionBundle:Default:index }
+
+
+   
+
+
+   
+
